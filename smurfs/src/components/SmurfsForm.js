@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import { connect } from "react-redux";
 
+import { postSmurfs } from "../actions";
+
 function SmurfsForm(props) {
   console.log(`Console logging props in the SmurfsForm.js`, props);
   const [userInput, setUserInput] = useState({
@@ -18,6 +20,7 @@ function SmurfsForm(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    props.postSmurfs(userInput);
   };
 
   return (
@@ -53,6 +56,9 @@ function SmurfsForm(props) {
   );
 }
 
-export default connect((state) => {
-  return {};
-}, {})(SmurfsForm);
+export default connect(
+  (state) => {
+    return {};
+  },
+  { postSmurfs }
+)(SmurfsForm);
