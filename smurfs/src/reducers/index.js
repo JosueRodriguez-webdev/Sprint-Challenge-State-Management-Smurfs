@@ -20,7 +20,11 @@ export const smurfsReducer = (state = initialState, action) => {
     case POST_SMURFS:
       return { ...state, isPosting: true };
     case SUCCESS_POSTING_SMURFS:
-      return { ...state, smurfs: [...state, action.payload], isPosting: false };
+      return {
+        ...state,
+        smurfs: action.payload,
+        isPosting: false
+      };
     case FAILED_POSTING_SMURFS:
       return { ...state, isPosting: false, errors: action.payload };
     case FETCHING_SMURFS:

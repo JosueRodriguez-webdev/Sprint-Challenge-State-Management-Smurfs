@@ -14,9 +14,9 @@ function SmurfsList(props) {
 
   return (
     <div>
-      {/* {props.smurfs.data.map((smurf) => {
-        // return <SmurfsCard key={smurf.id} smurf={smurf} />;
-      })} */}
+      {props.smurfs.map((smurf) => {
+        return <SmurfsCard key={smurf.id} smurf={smurf} />;
+      })}
     </div>
   );
 }
