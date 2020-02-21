@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import SmurfsCard from "./SmurfsCard";
 
 import { connect } from "react-redux";
 
@@ -11,7 +12,13 @@ function SmurfsList(props) {
     props.getSmurfs();
   }, []);
 
-  return <div></div>;
+  return (
+    <div>
+      {/* {props.smurfs.data.map((smurf) => {
+        // return <SmurfsCard key={smurf.id} smurf={smurf} />;
+      })} */}
+    </div>
+  );
 }
 
 export default connect(
