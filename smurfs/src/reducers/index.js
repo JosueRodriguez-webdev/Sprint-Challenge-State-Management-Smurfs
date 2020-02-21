@@ -1,12 +1,8 @@
 export let initialState = {
-  smurfs: [
-    {
-      name: "Brainey",
-      age: 200,
-      height: "5cm",
-      id: 0
-    }
-  ]
+  smurfs: [],
+  isPosting: false,
+  isFetching: false,
+  errors: ""
 };
 
 export const smurfsReducer = (state = initialState, actions) => {

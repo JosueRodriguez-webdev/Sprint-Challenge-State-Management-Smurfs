@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-function SmurfsList() {
+import { connect } from "react-redux";
+
+function SmurfsList(props) {
+  console.log(`Console logging props in the SmurfsList.js`, props);
+
+  useEffect(() => {
+    // import .get actions here!!!
+  }, []);
+
   return <div></div>;
 }
 
-export default SmurfsList;
+export default connect((state) => {
+  return {
+    smurfs: state.smurfs
+  };
+}, {})(SmurfsList);

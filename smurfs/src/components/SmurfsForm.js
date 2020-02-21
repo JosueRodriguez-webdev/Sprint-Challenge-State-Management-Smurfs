@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
-function SmurfsForm() {
+import { connect } from "react-redux";
+
+function SmurfsForm(props) {
+  console.log(`Console logging props in the SmurfsForm.js`, props);
   const [userInput, setUserInput] = useState({
     name: "",
     age: "",
@@ -50,4 +53,6 @@ function SmurfsForm() {
   );
 }
 
-export default SmurfsForm;
+export default connect((state) => {
+  return {};
+}, {})(SmurfsForm);
