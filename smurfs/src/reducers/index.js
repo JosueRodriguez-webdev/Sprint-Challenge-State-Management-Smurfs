@@ -9,7 +9,7 @@ export let initialState = {
   ]
 };
 
-export const smurfsReducer = (actions = initialState, actions) => {
+export const smurfsReducer = (state = initialState, actions) => {
   switch (actions.type) {
     default:
       return state;
