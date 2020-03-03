@@ -22,11 +22,18 @@ In this challenge, you are to build a Smurfs village utilizing context or Redux 
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What problem does the context API help solve?
-- [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-- [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
-- [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
-- [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+1. What problem does the context API help solve?
+   A: Context API is a component structure that enables us to share state across our app similar to redux.
+2. In your own words, describe actions, reducers and the store and their role in Redux. What does each piece do? Why is the store known as a ‘single source of truth’ in a redux application?
+   A: -actions: Actions in redux are functions that send off a type and payload after an event listener has been fired in the app.
+   -reducers: reducers are functions that take in current and initial state and return a new cloned state relevant to the type it undergoes in the switch statement .
+   -store: the store is essentially the new cloned state
+3. What is the difference between Application state and Component state? When would be a good time to use one over the other?
+   A: Component state local state for example a form normally contains local state and per application state, it is normally global.
+4. Describe redux-thunk, what does it allow us to do? How does it change our action-creators?
+   A: Redux thunk is middleware that can return a function.
+5. What is your favorite state management system you’ve learned and this sprint? Please explain why!
+   A: My favorite state management system is redux so far because it is complex to use.
 
 ## Project Set Up
 
